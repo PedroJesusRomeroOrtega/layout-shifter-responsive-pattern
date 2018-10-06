@@ -1,1 +1,68 @@
 @import 'reset';
+@import 'colors';
+
+.shifterContainer {
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: auto 50vh 50vh;
+  grid-template-areas:
+    'menu'
+    'contentA'
+    'contentB';
+}
+
+.menu {
+  grid-area: menu;
+  display: flex;
+  flex-direction: row;
+  background-color: $menuColor;
+}
+
+.contentA {
+  grid-area: contentA;
+  background-color: $contentAColor;
+}
+
+.contentB {
+  grid-area: contentB;
+  background-color: $contentBColor;
+}
+
+// Small devices
+@media (min-width: 576px) {
+}
+
+// Medium devices
+@media (min-width: 768px) {
+  .shifterContainer {
+    grid-template-columns: 100vw;
+    grid-template-rows: 20vh 40vh 40vh;
+    grid-template-areas:
+      'menu'
+      'contentA'
+      'contentB';
+  }
+  .menu {
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+// Large devices
+@media (min-width: 992px) {
+  .shifterContainer {
+    grid-template-columns: 30vw 70vw;
+    grid-template-rows: 50vh 50vh;
+    grid-template-areas:
+      'menu contentA'
+      'menu contentB';
+  }
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+// Extra large devices
+@media (min-width: 1200px) {
+}

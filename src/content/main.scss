@@ -1,10 +1,15 @@
 @import 'reset';
-@import 'colors';
+@import 'theme';
+
+.centerItems {
+  display: flex;
+  justify-content: center;
+}
 
 .shifterContainer {
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: auto 50vh 50vh;
+  grid-template-rows: auto 48vh 48vh;
   grid-template-areas:
     'menu'
     'contentA'
@@ -16,6 +21,8 @@
   display: flex;
   flex-direction: row;
   background-color: $menuColor;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
 }
 
 .contentA {
@@ -29,11 +36,11 @@
 }
 
 // Small devices
-@media (min-width: 576px) {
+@media (min-width: $smallBreakpoint) {
 }
 
 // Medium devices
-@media (min-width: 768px) {
+@media (min-width: $mediumBreakpoint) {
   .shifterContainer {
     grid-template-columns: 100vw;
     grid-template-rows: 20vh 40vh 40vh;
@@ -49,9 +56,9 @@
 }
 
 // Large devices
-@media (min-width: 992px) {
+@media (min-width: $largeBreakpoint) {
   .shifterContainer {
-    grid-template-columns: 30vw 70vw;
+    grid-template-columns: 14em 34em;
     grid-template-rows: 50vh 50vh;
     grid-template-areas:
       'menu contentA'
@@ -64,5 +71,8 @@
 }
 
 // Extra large devices
-@media (min-width: 1200px) {
+@media (min-width: $extraLargeBreakpoint) {
+  .shifterContainer {
+    grid-template-columns: 15em 55em;
+  }
 }

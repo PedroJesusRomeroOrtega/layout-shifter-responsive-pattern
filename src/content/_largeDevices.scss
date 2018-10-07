@@ -1,0 +1,11 @@
+.shifterContainer {
+    grid-template-columns: 14em 34em;
+    grid-template-rows: 50vh 50vh;
+    grid-template-areas:
+      'menu contentA'
+      'menu contentB';
+  }
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }

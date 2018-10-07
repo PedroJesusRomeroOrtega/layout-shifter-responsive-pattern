@@ -1,0 +1,33 @@
+.centerItems {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .shifterContainer {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: auto 48vh 48vh;
+    grid-template-areas:
+      'menu'
+      'contentA'
+      'contentB';
+  }
+  
+  .menu {
+    grid-area: menu;
+    display: flex;
+    flex-direction: row;
+    background-color: $menuColor;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+  
+  .contentA {
+    grid-area: contentA;
+    background-color: $contentAColor;
+  }
+  
+  .contentB {
+    grid-area: contentB;
+    background-color: $contentBColor;
+  }
